@@ -1,1 +1,4 @@
-<h1>Home Page</h1>
+<nav >
+  <h1>ChatRoom</h1>
+  <a ng-repeat="room in home.rooms track by $index" href="#">{{room.$value}}</a>
+</nav>
