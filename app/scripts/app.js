@@ -15,6 +15,6 @@
     }
 
     angular
-        .module('chatRoom',['ui.router', 'firebase'])
+        .module('chatRoom',['ui.router', 'firebase', 'ui.bootstrap'])
         .config(config);
 })();

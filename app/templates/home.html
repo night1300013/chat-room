@@ -1,4 +1,5 @@
-<nav >
-  <h1>ChatRoom</h1>
+<nav class="new-room-modal" ng-controller="ModalCtrl as modal">
+  <h1>Chat Room</h1>
+  <button type="button" ng-click="modal.open()">New Room</button>
   <a ng-repeat="room in home.rooms" href="#">{{room.$value}}</a>
 </nav>
