@@ -12,12 +12,8 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
-/*            .state('room', {
-                url: 'room',
-                controller: 'MessageCtrl as message',
-                templateUrl: '/templates/listMessages.html'
-            });*/
-/*         $routeProvider
+/*
+         $routeProvider
             .when('/', {
                 templateUrl: '/templates/home.html',
                 controller: 'HomeCtrl as home',

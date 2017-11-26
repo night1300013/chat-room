@@ -1,12 +1,12 @@
 <nav class="new-room-modal" ng-controller="ModalCtrl as modal">
   <h1>Chat Room</h1>
   <button type="button" ng-click="modal.open()">New Room</button>
-  <div ng-repeat="room in home.rooms" ng-click="home.currentRoom(room.$id)">{{room.$value}}</div>
+  <div ng-repeat="room in home.rooms" ng-click="home.currentRoom(room)">{{room.$value}}</div>
 </nav>
 
 <!--<list-messages></list-messages>-->
 <main>
-  <h1>{{home.room}}</h1>
+  <h1>{{room.$value}}</h1>
   <div ng-repeat="message in messages">
     <h5>{{message.userName}}</h5>
     <p>{{message.content}}</p>

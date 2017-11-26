@@ -1,10 +1,10 @@
 (function() {
     function HomeCtrl(Room, $scope, Message) {
         this.rooms = Room.all;
-        this.currentRoom = function(roomId) {
+        this.currentRoom = function(room) {
 //          console.log("Clicked " + roomId);
-            this.room = Room.currentRoom(roomId);
-            $scope.messages = Message.getByRoomId(roomId);
+            $scope.room = room;
+            $scope.messages = Message.getByRoomId($scope.room.$id);
 /*            Message.getByRoomId(roomId).$bindTo($scope, "data")
                 .then(function(){
                   this.messages = $scope.data;
