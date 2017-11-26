@@ -17,7 +17,7 @@
                 controller: 'MessageCtrl as message',
                 templateUrl: '/templates/listMessages.html'
             });*/
-         $routeProvider
+/*         $routeProvider
             .when('/', {
                 templateUrl: '/templates/home.html',
                 controller: 'HomeCtrl as home',
@@ -26,7 +26,7 @@
                       return message.getByRoomId();
                   }
                 }
-            });
+            });*/
     }
 
     angular
