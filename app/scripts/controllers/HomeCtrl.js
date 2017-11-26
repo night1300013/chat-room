@@ -5,10 +5,6 @@
 //          console.log("Clicked " + roomId);
             $scope.room = room;
             $scope.messages = Message.getByRoomId($scope.room.$id);
-/*            Message.getByRoomId(roomId).$bindTo($scope, "data")
-                .then(function(){
-                  this.messages = $scope.data;
-            });*/
         }
 
     }
