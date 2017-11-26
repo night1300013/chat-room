@@ -7,14 +7,17 @@
     Room.all = rooms;
 
     Room.add = function(roomName){
-      var name = rooms.length + 1;
       rooms.$add({
         $value: roomName
-        }).then(function(ref) {
+/*        }).then(function(ref) {
         var id = ref.key;
         console.log("added record with id " + id);
         rooms.$indexFor(id); // returns location in the array
-      });
+  */    });
+    }
+
+    Room.currentRoom = function(roomId) {
+      return rooms.$getRecord(roomId).$value;
     }
 
     return Room;

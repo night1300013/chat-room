@@ -8,7 +8,7 @@ nav {
   padding: 0;
   background-color: #f1f1f1;
   position: fixed;
-  width: 330px;
+  width: 30%;
   height: 100%;
 }
 nav h1 {
@@ -25,7 +25,7 @@ nav button {
   color: #aaa;
   background-color: #eee;
 }
-nav a {
+nav div {
   display: block;
   font-size: 18px;
   color: #aaa;
@@ -34,12 +34,36 @@ nav a {
   text-transform: capitalize;
 }
 
-nav a:hover {
+nav div:hover {
   background-color: #555;
   color: white;
 }
 
-nav a.active {
+nav div.active {
   background-color: green;
   color: white;
+}
+
+main {
+  width: 70%;
+  margin: 0 0 0 30%;
+}
+
+main h1 {
+  margin: 0;
+  padding: 35px;
+  text-transform: capitalize;
+}
+
+main div {
+  margin 0;
+  padding-left: 35px;
+}
+main span {
+  float: right;
+  padding-right: 35px;
+}
+
+main p {
+  display: inline-block;
 }
