@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Set a username</h3>
+</div>
+<form name="modalForm">
+<div class="modal-body" id="modal-body" ng-class="{ 'has-error': modalForm.userInput.$invalid }">
+    <p>This name will appear when you send messages</p>
+    <input type="text" name="userInput" required ng-model="cookies.userName">
+    <span ng-show="modalForm.userInput.$error.required" class="help-block">Please enter a valid username.</span>
+</div>
+
+<div class="modal-footer" >
+    <button id="user-btn" class="btn btn-primary" ng-disabled="modalForm.$invalid" type="button" ng-click="cookies.ok()">Set Username</button>
+</div>
+</form>

@@ -5,7 +5,8 @@
 </nav>
 
 <main>
-  <h1>{{room.$value}}</h1>
+  <h1>{{room.$value || "Lobby"}}</h1>
+
   <div ng-repeat="message in messages">
     <h5>{{message.userName}}</h5>
     <p>{{message.content}}</p>

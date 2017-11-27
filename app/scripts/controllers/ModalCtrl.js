@@ -2,9 +2,7 @@
     function ModalCtrl($uibModal, $log) {
         this.open = function() {
           var modalInstance = $uibModal.open({
-//            ariaLabelledBy: 'modal-title',
-//            ariaDescribedBy: 'modal-body',
-            templateUrl: '../templates/modal.html',
+            templateUrl: '/templates/modal.html',
             controller: 'ModalInstanceCtrl',
             controllerAs: 'modal',
           });

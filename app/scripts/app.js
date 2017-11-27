@@ -12,20 +12,23 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
-/*
-         $routeProvider
-            .when('/', {
-                templateUrl: '/templates/home.html',
-                controller: 'HomeCtrl as home',
-                resolve: {
-                  message: function(message){
-                      return message.getByRoomId();
-                  }
-                }
-            });*/
     }
 
+    function ChatRoomCookies($cookies, $uibModal) {
+      var currentUser = $cookies.get('chatRoomUser');
+      if (!currentUser || currentUser === '') {
+        // Do something to allow users to set their username
+        $uibModal.open({
+          templateUrl: '/templates/userModal.html',
+          controller: 'CookiesCtrl',
+          controllerAs: 'cookies',
+          backdrop: 'static',
+          keyboard: false
+        })
+      }
+    }
     angular
-        .module('chatRoom',['ui.router', 'firebase', 'ui.bootstrap'])
-        .config(config);
+        .module('chatRoom',['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+        .config(config)
+        .run(['$cookies', '$uibModal', ChatRoomCookies]);
 })();
