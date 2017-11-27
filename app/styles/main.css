@@ -46,7 +46,7 @@ nav div.active {
 
 main {
   width: 70%;
-  margin: 0 0 0 30%;
+  margin: 0 0 5px 30%;
 }
 
 main h1 {
@@ -78,4 +78,26 @@ main p {
 
 input[name=userInput] {
   width: 50%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 70%;
+  margin: 0 0 0 30%;
+  border: 1px solid #000;
+  background-color: white;
+  min-width: 300px;
+}
+
+input[name=message] {
+  width: 90%;
+  font-size: 18px;
+  border:0;
+}
+
+footer .btn {
+  float: right;
+  border: 0;
+  margin: 0;
 }

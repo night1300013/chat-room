@@ -12,9 +12,11 @@
     <p>{{message.content}}</p>
     <span>{{message.sentAt}}</span>
   </div>
-  <div>
-    <h5>Name</h5>
-    <p>Message</p>
-    <span>time</span>
-  </div>
 </main>
+
+<footer>
+  <form>
+    <span><input name="message" type="text" placeholder="Write your message here..." ng-model="home.currentMessage"><span>
+    <span><button class="btn btn-primary" type="button" ng-click="home.sendMessage(home.currentMessage)">Send</button></span>
+  </form>
+</footer>
